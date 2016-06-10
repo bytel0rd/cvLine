@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>QVL login Page</title>
+
+        <!-- CSS -->
+<link rel="stylesheet" href="css/styles.css" />
+    <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700"> -->
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    		<link rel="stylesheet" href="assets/css/form-elements.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <!-- <link rel="stylesheet" href="assets/css/media-queries.css"> -->
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+    </head>
+
+    <body>
+
+<section>
+  <!-- Top menu -->
+  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand page-scroll btn-link" href="/"><button type="button" class="btn btn-primary">
+                <span class="glyphicon glyphicon-home"> HomePage</span>
+              </button></a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                  <li>
+                      <a class="page-scroll btn-link" href="/auth/editDashBoard"><button class="btn btn-primary" data-toggle="modal" data-target="#">
+                        <span class="glyphicon glyphicon-user"> Edit DashBoard</span>
+                      </button></a>
+                  </li>
+                  <li>
+                      <a class="page-scroll btn-link" href="/auth/logOut"><button class="btn btn-primary" data-toggle="modal" data-target="#">
+                        <span class="glyphicon glyphicon-log-out"> logOut</span>
+                      </button></a>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+  </nav>
+</section>
+
+  <section>
+    <!-- Description -->
+<div class="description-container">
+      <div class="container">
+  </div>
+</div>
+
+<!-- Multi Step Form -->
+<div class="msf-container">
+      <div class="container">
+        <div class="row">
+              <div class="col-sm-12 msf-title">
+                  <h3>QvLine dashBoard  <small>...welcome Back <p></p></small> </h3>
+              </div>
+          </div>
+  </div>
+</div>
+  </section>
+
+    <section id="introText">
+        <div class="container">
+            <div class="text-center">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="container text-left" style="padding-top: 10px">
+                    <p>FullName: <%= userBio.fullName %> </p>
+                    <p>EmailAddress: <%= userBio.emailAddress %> </p>
+                    <p>Gender: <%= userBio.Gender %> </p>
+                    <p>BirthDay: <%= userBio.DOB %> </p>
+                    <p>PhoneNo: <%= userBio.PhoneNo %> </p>
+                    <p> Town Of Birth:  <%= userBio.cityOfBirth %></p>
+                    <p> Local Govt Area: <%= userBio.localGovt %></p>
+                    <p> State Of Origin: <%= userBio.stateOfOrigin %></p>
+
+                  </div>
+                </div>
+                <div class="col-md-offset-8">
+                  <div class="container-fluid"><img class="thumbnail imgLiquid img-responsive pull-right" style="width:300px; height:300px;"  src="<%= userBio.passportUrl%>" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+    </section>
+    <!--About-->
+    <section id="aboutUs" class="secPad">
+        <div class="container">
+            <div class="heading text-center">
+
+                <!-- Heading -->
+
+                <h2>  I am <%= userBio.fullName %> </h2>
+                <p> <%- userBio.personalSummary.replace(/\\n/gi, ' \r\n\<br\>') %></p>
+            </div>
+            <div class="row">
+                <!-- item -->
+                <div class="container">
+                  <div class="col-md-4 text-center tileBox">
+                    <div class="container-fluid text-left">
+                      <h4>Area of Expertise</h4>
+                      <p class="mrgBtm20"><%- userBio.AreaOfExp.replace(/\\n/gi, ' \r\n\<br\>') %></p>
+                    </div>
+                  </div>
+                  <!-- end: -->
+
+                  <!-- item -->
+                  <div class="col-md-4 text-center tileBox">
+                    <div class="container-fluid text-left">
+                      <h4>Adacemic Qualifications</h4>
+                      <p class="mrgBtm20"><%- userBio.EduAndQual.Academic.replace(/\\n/gi, ' \r\n\<br\>') %></p>
+                    </div>
+                  </div>
+                  <!-- end: -->
+
+                  <!-- item -->
+                  <div class="col-md-4 text-center tileBox">
+                    <div class="container-fluid">
+                      <h4>Cerifications</h4>
+                      <p class="mrgBtm20"><%- userBio.EduAndQual.Cerifications.replace(/\\n/gi, ' \r\n\<br\>') %></p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- end: -->
+            </div>
+            <div style="padding-top: 40px"class="heading text-center">
+
+                <!-- Heading -->
+
+                <h2> WORK HISTORY </h2>
+
+            </div>
+        </div>
+    </section>
+
+    <!--Skills-->
+  <section id="skills" class="secPad white">
+      <div class="container">
+        <div class=" text-center">
+                <!-- Heading -->
+
+                <p></p>
+            </div>
+
+          <div class="row text-left">
+
+            <p><%- userBio.WorkExperience.replace(/\\n/gi, ' \r\n\<br\>')%></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="aboutUs" class="secPad">
+        <div class="container">
+            <div class="row">
+                <!-- item -->
+                <div class="col-md-4 text-center tileBox">
+                  <div class="container-fluid text-left">
+                    <h4>Language And Techical Skills</h4>
+                    <p class="mrgBtm20"><%- userBio.langTechSkill.replace(/\\n/gi, ' \r\n\<br\>') %></p>
+                  </div>
+                </div>
+                <!-- end: -->
+                <!-- item -->
+                <div class="col-md-4 text-center tileBox">
+                  <div class="container-fluid text-left">
+                    <!-- .replace(/\\n/gi, '\r\n') -->
+                    <h4>Hobbies</h4>
+                    <p class="mrgBtm20"> <%- userBio.SkillHobbies.replace(/\\n/gi, ' \r\n\<br\>') %>
+                  </div>.
+                  <!-- <script>
+                  var biodun = "<%=  userBio.SkillHobbies.replace(/\\n/gi, ' \r\n\<br\>') %>";
+                  </script></br></p> -->
+                </div>
+                <!-- end: -->
+
+                <!-- item -->
+                <div class="col-md-4 text-center tileBox">
+                  <div class="container-fluid text-left">
+                    <h4>Current Address</h4>
+                    <p class="mrgBtm20">streetAddress :<%= userBio.streetAddress %>,</p>
+                    <p class="mrgBtm20">cityAddress : <%= userBio.cityAddress %>,</p>
+                    <p class="mrgBtm20">stateAddress : <%= userBio.stateAddress %> .</p>
+
+                  </div>
+                </div>
+                <!-- end: -->
+            </div>
+        </div>
+    </section>
+
+
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/bootstrap/imgLiquid-min.js" charset="utf-8"></script>
+
+        <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+
+
+
+
+    </body>
+
+</html>

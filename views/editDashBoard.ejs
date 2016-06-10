@@ -1,0 +1,257 @@
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> QVL edit DashBoard Page</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/css/form-elements.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/media-queries.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+    </head>
+
+    <body>
+
+		<!-- Top menu -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll btn-primary btn-link" href="/"><button type="button" class="btn btn-primary">
+                  <span class="glyphicon glyphicon-home"> HomePage</span>
+                </button></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll btn-link" href="/auth/dashBoard"><button class="btn btn-primary" data-toggle="modal" data-target="#">
+                          <span class="glyphicon glyphicon-user"> DashBoard</span>
+                        </button></a>
+                    </li>
+
+
+                    <li>
+                        <a class="page-scroll btn-link" href="/auth/logOut"><button class="btn btn-primary" data-toggle="modal" data-target="#">
+                          <span class="glyphicon glyphicon-log-out"> logOut</span>
+                        </button></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+        <!-- Description -->
+		<div class="description-container">
+	        <div class="container">
+			</div>
+		</div>
+
+		<!-- Multi Step Form -->
+		<div class="msf-container">
+	        <div class="container">
+	        	<div class="row">
+	                <div class="col-sm-12 msf-title">
+	                    <h3>Fill In The QvLine DashBoard Form</h3>
+	                    <p>Please complete the form TO Update Your  Cv DashBoard:</p>
+	                </div>
+	            </div>
+	            <div class="row contenteditable">
+	                <div class="col-sm-12 msf-form">
+
+	                    <form role="form" action="/auth/dashBoard" method="post" class="form-inline" enctype="multipart/form-data">
+
+	                    	<fieldset>
+	            				<h4>Introduction <span class="step">(Step 1 / 10)</span></h4>
+	            				<div class="form-group">
+				                    <label for="fullName">Full Name:</label><br>
+				                    <input type="text" name="fullName" class="first-name form-control" id="fullName" >
+				                </div>
+				                <div class="form-group">
+				                    <label for="emailAddress">EmailAddress:</label><br>
+				                    <input type="text" name="emailAddress" class="last-name form-control" id="emailAddress"  >
+				                </div>
+				                <div class="form-group">
+				                    <label for="PhoneNo">PhoneNo:</label><br>
+				                    <input type="text" name="phoneNo" class="height form-control" id="phoneNo"  >
+				                </div>
+				                <div class="form-group">
+				                    <label for="gender">Gender:</label><br>
+				                    <input type="text" name="gender" class="weight form-control" id="gender" >
+				                </div>
+	            				<br>
+	            				<button type="button" class="btn btn-primary btn-next">Next <i class="fa fa-angle-right"></i></button>
+	            			</fieldset>
+
+	            			<fieldset>
+	            				<h4>Place and Date of Birth <span class="step">(Step 2 / 10)</span></h4>
+	            				<div class="form-group">
+				                    <label for="birth-city">City:</label><br>
+				                    <input type="text" name="cityOfBirth" class="birth-city form-control" id="cityOfBirth"  >
+				                </div>
+				                <div class="form-group">
+				                    <label for="birth-state">State:</label><br>
+				                    <input type="text" name="stateOfBirth" class="birth-state form-control" id="stateOfBirth"  >
+				                </div>
+				                <div class="form-group">
+				                    <label for="birth-country">Country:</label><br>
+				                    <input type="text" name="countryOfBirth" class="birth-country form-control" id="countryOfBirth" >
+				                </div>
+				                <div class="form-group">
+				                    <label for="birth-date">Date (DD/MM/YYYY):</label><br>
+				                    <input type="text" name="DOB" class="birth-date form-control" id="DOB" >
+				                </div>
+	            				<br>
+	            				<button type="button" class="btn btn-primary btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
+	            				<button type="button" class="btn btn-primary btn-next">Next <i class="fa fa-angle-right"></i></button>
+	            			</fieldset>
+
+	            			<fieldset>
+	            				<h4>Current Address and Contact Information <span class="step">(Step 3 / 10)</span></h4>
+	            				<div class="form-group">
+				                    <label for="address">Street Address:</label><br>
+				                    <input type="text" name="streetAddress" class="address form-control" id="streetAddress" >
+				                </div>
+				                <div class="form-group">
+				                    <label for="address-city">City:</label><br>
+				                    <input type="text" name="cityAddress" class="address-city form-control" id="cityAddress" >
+				                </div>
+				                <div class="form-group">
+				                    <label for="address-state">State / Province:</label><br>
+				                    <input type="text" name="stateAddress" class="address-state form-control" id="stateAddress" >
+				                </div>
+				                <div class="form-group">
+				                    <label for="address-country">LGA:</label><br>
+				                    <input type="text" name="LGA" class="address-country form-control" id="LGA" >
+				                </div>
+	            				<br>
+	            				<button type="button" class="btn btn-primary btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
+	            				<button type="button" class="btn btn-primary btn-next">Next <i class="fa fa-angle-right"></i></button>
+	            			</fieldset>
+                    <fieldset>
+                      <div class="form-group">
+                        <h4>Personal Academic Qualifications <span class="step">(Step 4 / 10)</span></h4>
+                            <label for="Academic">Academic Qualifications</label><br>
+                            <textarea name="acadQual" class="why-join form-control" id="acadQual"  ></textarea>
+                            <br>
+      	            				<button type="button" class="btn btn-primary btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
+      	            				<button type="button" class="btn btn-primary btn-next">Next <i class="fa fa-angle-right"></i></button>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                      <div class="form-group">
+                        <h4>Personal Cerifications <span class="step">(Step 5 / 10)</span></h4>
+                          <label for="Qualifications">Cerifications:</label><br>
+                          <textarea name="cerifi" class="why-join form-control" id="cerifi" ></textarea>
+                          <br>
+    	            				<button type="button" class="btn btn-primary btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
+    	            				<button type="button" class="btn btn-primary btn-next">Next <i class="fa fa-angle-right"></i></button>
+                      </div>
+                    </fieldset>
+                    <fieldset>
+                      <div class="form-group">
+                        <h4>Personal Area Of Experitise <span class="step">(Step 6 / 10)</span></h4>
+                          <label for="AOE">Area Of Experitise:</label><br>
+                          <textarea name="AOE" class="why-join form-control" id="AOE" ></textarea>
+                          <br>
+    	            				<button type="button" class="btn btn-primary btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
+    	            				<button type="button" class="btn btn-primary btn-next">Next <i class="fa fa-angle-right"></i></button>
+                      </div>
+                    </fieldset>
+                    <fieldset>
+                      <h4>Personal Skills And Hobbies <span class="step">(Step 7 / 10)</span></h4>
+                      <div class="form-group">
+                          <label for="skillHobb">Skills And Hobbies:</label><br>
+                          <textarea name="SAH" class="why-join form-control" id="SAH"   ></textarea>
+                          <br>
+    	            				<button type="button" class="btn btn-primary btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
+    	            				<button type="button" class="btn btn-primary btn-next">Next <i class="fa fa-angle-right"></i></button>
+                      </div>
+                    </fieldset>
+                    <fieldset>
+                      <h4>Personal Techincal And Language Skills <span class="step">(Step 8 / 10)</span></h4>
+                      <div class="form-group">
+                          <label for="langSkill">Techinical And Language Skills:</label><br>
+                          <textarea name="LS" class="why-join form-control" id="LS" ></textarea>
+                          <br>
+    	            				<button type="button" class="btn btn-primary btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
+    	            				<button type="button" class="btn btn-primary btn-next">Next <i class="fa fa-angle-right"></i></button>
+                      </div>
+                    </fieldset>
+	            			<fieldset>
+	            				<h4>workHistory <span class="step">(Step 9 / 10)</span></h4>
+	            				<div class="form-group">
+									<label for="workHistory">Tell Us About Your Work History:</label><br>
+				                    <textarea name="WH" class="about-you form-control" id="WH"   ></textarea>
+				                </div>
+	            				<br>
+	            				<button type="button" class="btn  btn-primary btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
+	            				<button type="button" class="btn btn-primary btn-next">Next <i class="fa fa-angle-right"></i></button>
+	            			</fieldset>
+
+	            			<fieldset>
+	            				<h4>Personal Summary <span class="step">(Step 10 / 10)</span></h4>
+	            				<div class="form-group">
+									<label for="why-join">Tell us more About You:</label><br>
+				                    <textarea name="PS" class="why-join form-control" id="PS"   ></textarea>
+				                </div>
+                        <div class="form-group">
+  									<label for="why-join">Upload Your passport: <strong>must be either PNG or JPEG and LESS Than 1MEG</strong></label>
+                    <input type="file" value=""  id="i_file" name="passport">
+  				                </div>
+	            				<br>
+	            				<button type="button" class="btn btn-primary btn-previous"><i class="fa fa-angle-left"></i> Previous</button>
+	            				<button type="submit" value="Submit" id="i_submit" class="btn btn-primary">Submit</button>
+	            			</fieldset>
+
+	                    </form>
+
+	                </div>
+	            </div>
+			</div>
+		</div>
+
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+        <script src="assets/js/placeholder.js"></script>
+        <% if (  userBio  == []) { %>
+          userBio.fullName
+        <% } %>
+<%- include('bio',{userBio: userBio}) %>
+
+
+
+        <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+
+    </body>
+
+</html>

@@ -1,0 +1,6 @@
+{
+  "development":{
+    "dbUrl": "mongodb://127.0.0.1/cvLine",
+    "port" : 3000
+  }
+}
